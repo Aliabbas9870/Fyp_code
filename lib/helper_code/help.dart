@@ -1,6 +1,7 @@
-import 'package:beautilly/views/onBording_start.dart';
-import 'package:beautilly/widgets/constant.dart';
+
 import 'package:flutter/material.dart';
+import 'package:fypapp/views/onBording_start.dart';
+import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnBording extends StatefulWidget {

@@ -1,7 +1,10 @@
-import 'package:beautilly/widgets/constant.dart';
-import 'package:beautilly/widgets/fellow.dart';
-import 'package:beautilly/widgets/services.dart';
 import 'package:flutter/material.dart';
+import 'package:fypapp/widgets/constant.dart';
+import 'package:fypapp/widgets/feature.dart';
+import 'package:fypapp/widgets/fellow.dart';
+import 'package:fypapp/widgets/near_by_offer.dart';
+import 'package:fypapp/widgets/search_interest.dart';
+import 'package:fypapp/widgets/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeView extends StatefulWidget {
@@ -18,6 +21,7 @@ class _HomeViewState extends State<HomeView> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+        height: double.infinity,
         margin: EdgeInsets.only(left: 13, top: 15),
         child: Padding(
           padding: EdgeInsets.only(top: 20, left: 5, right: 20),
@@ -30,7 +34,9 @@ class _HomeViewState extends State<HomeView> {
                   height: 9,
                 ),
                 Container(
-                  height: size.height,
+                  // height: size.height,
+                  // height: double.infinity,
+
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -105,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0, vertical: 20),
+                                        horizontal: 10.0, vertical: 20),
                                     child: Container(
                                       width: 166,
                                       child: Text(
@@ -119,11 +125,13 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                   Expanded(
                                       child: Container(
-                                    height: 90,
-                                    width: 110,
+                                    height: 98,
+                                    width: 120,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.only(
-                                            topRight: Radius.circular(12),
+                                            topRight: Radius.circular(20),
+                                            topLeft: Radius.circular(12),
+                                            bottomLeft: Radius.circular(20),
                                             bottomRight: Radius.circular(12)),
                                         color: Color(0xffFFF9E5)),
                                     child: Center(
@@ -142,7 +150,7 @@ class _HomeViewState extends State<HomeView> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0,vertical: 5),
+                                    horizontal: 10.0, vertical: 5),
                                 child: Container(
                                   width: 88,
                                   height: 84,
@@ -182,26 +190,26 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/hr.png",
+                              title: "Haircut",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/nail.png",
+                              title: "Nails",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/facial.png",
+                              title: "Facial",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/coloring.png",
+                              title: "Coloring",
                             ),
                           ),
                         ],
@@ -219,26 +227,26 @@ class _HomeViewState extends State<HomeView> {
                         children: [
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/spa.png",
+                              title: "Spa",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/waxing.png",
+                              title: "Waxing",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/makeup.png",
+                              title: "Makeup",
                             ),
                           ),
                           Container(
                             child: Services(
-                              imgPath: "assets/images/on2.png",
-                              title: "Hair",
+                              imgPath: "assets/images/message.png",
+                              title: "Message",
                             ),
                           ),
                         ],
@@ -251,42 +259,188 @@ class _HomeViewState extends State<HomeView> {
                               fontSize: 16,
                               color: Colors.black,
                               fontWeight: FontWeight.bold)),
-                              SizedBox(height: 12,),
+                      SizedBox(
+                        height: 12,
+                      ),
 
                       SingleChildScrollView(
-                        scrollDirection:Axis.horizontal,
+                        scrollDirection: Axis.horizontal,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
+                            SizedBox(
+                              width: 12,
+                            ),
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
-
+                            SizedBox(
+                              width: 12,
+                            ),
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
-
+                            SizedBox(
+                              width: 12,
+                            ),
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
-
+                            SizedBox(
+                              width: 12,
+                            ),
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
-
+                            SizedBox(
+                              width: 12,
+                            ),
                             Fellow(imgPath: "assets/images/on2.png"),
-                            SizedBox(width: 12,),
-
-                          
-                          
+                            SizedBox(
+                              width: 12,
+                            ),
                           ],
                         ),
                       ),
-                      SizedBox(height: 12,),
-                      Text("Featured Salon",style: GoogleFonts.manrope(
-                              fontSize: 16,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold))
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Featured Salon",
+                              style: GoogleFonts.manrope(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                          Text("view all",
+                              style: GoogleFonts.manrope(
+                                  fontSize: 16,
+                                  color: constant.primaryColor,
+                                  fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
                     ],
+                  ),
+                ),
+                Container(
+                  height: 228,
+                  // color: Colors.black,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Feature(
+                          image: "assets/images/f1.png",
+                          title: "Salon de Elegance",
+                          service: "Hair . Nails . Facial",
+                          location: "360 Stillwater Rd. Palm City..",
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Feature(
+                          image: "assets/images/f2.png",
+                          service: "Hair . Nails . Facial",
+                          title: "Salon de Elegance",
+                          location: "2607  Haymond Rocks ..",
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 14,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 102,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Most Search Interest",
+                                  style: GoogleFonts.manrope(
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                SearchInterest(
+                                  imgPath: "assets/images/hr.png",
+                                  title: "Fair",
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                SearchInterest(
+                                  imgPath: "assets/images/facial.png",
+                                  title: "Facial",
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                SearchInterest(
+                                  imgPath: "assets/images/nail.png",
+                                  title: "Nails",
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
+                Container(
+                  height: 222,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Nearby Offers",
+                                style: GoogleFonts.manrope(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold)),
+                            Text("view all",
+                                style: GoogleFonts.manrope(
+                                    fontSize: 16,
+                                    color: constant.primaryColor,
+                                    fontWeight: FontWeight.bold)),
+                          ],
+                        ),
+                        SizedBox(height: 5,),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              NearByOffer(
+                                  image: "assets/images/f1.png",
+                                  title: "Sophisticated Salon",
+                                  service: "Hair . Facial",
+                                  location: "360 Stillwater Rd. Palm City.."),
+                              NearByOffer(
+                                  image: "assets/images/f1.png",
+                                  title: "Sophisticated Salon",
+                                  service: "Hair . Facial",
+                                  location: "360 Stillwater Rd. Palm City.."),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

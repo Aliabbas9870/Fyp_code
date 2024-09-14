@@ -1,7 +1,7 @@
-import 'package:beautilly/auth/emai_verify.dart';
-import 'package:beautilly/auth/signup_auth.dart';
-import 'package:beautilly/widgets/constant.dart';
+
 import 'package:flutter/material.dart';
+import 'package:fypapp/auth/emai_verify.dart';
+import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ForgetPassword extends StatefulWidget {

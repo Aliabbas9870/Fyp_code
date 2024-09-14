@@ -1,6 +1,8 @@
-import 'package:beautilly/views/home_view.dart';
-import 'package:beautilly/views/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:fypapp/chatbot/AssistantBot.dart';
+import 'package:fypapp/chatbot/notification.dart';
+import 'package:fypapp/views/home_view.dart';
+import 'package:fypapp/views/profile.dart';
 
 class BottomBarStart extends StatefulWidget {
   const BottomBarStart({super.key});
@@ -50,27 +52,51 @@ class _BottomBarStartState extends State<BottomBarStart> {
             BottomNavigationBarItem(
                 icon: Image.asset("assets/images/BtmM.png"),
                 label: "",
-                activeIcon: Image.asset("assets/images/BtmM.png",color: Color(0xff156778),)),
+                activeIcon: Image.asset(
+                  "assets/images/BtmM.png",
+                  color: Color(0xff156778),
+                )),
             BottomNavigationBarItem(
                 icon: Image.asset("assets/images/BtmW2.png"),
                 label: "",
-                activeIcon: Image.asset("assets/images/BtmW2.png",color: Color(0xff156778),)),
+                activeIcon: Image.asset(
+                  "assets/images/BtmW2.png",
+                  color: Color(0xff156778),
+                )),
             BottomNavigationBarItem(
-              activeIcon: Image.asset("assets/images/BtmShop.png",color: Color(0xff156778),),
-                icon: Image.asset("assets/images/BtmShop.png"), label: ""),
+                activeIcon: Image.asset(
+                  "assets/images/BtmShop.png",
+                  color: Color(0xff156778),
+                ),
+                icon: Image.asset("assets/images/BtmShop.png"),
+                label: ""),
             BottomNavigationBarItem(
-              activeIcon: Image.asset("assets/images/BtmInbox.png",color: Color(0xff156778),),
-                icon: Image.asset("assets/images/BtmInbox.png"), label: ""),
+                activeIcon: Image.asset(
+                  "assets/images/BtmInbox.png",
+                  color: Color(0xff156778),
+                ),
+                icon: Image.asset("assets/images/BtmInbox.png"),
+                label: ""),
             BottomNavigationBarItem(
-              activeIcon: Image.asset("assets/images/BtmProfil.png",color: Color(0xff156778),),
-                icon: Image.asset("assets/images/BtmProfil.png"), label: ""),
+                activeIcon: Image.asset(
+                  "assets/images/BtmProfil.png",
+                  color: Color(0xff156778),
+                ),
+                icon: Image.asset("assets/images/BtmProfil.png"),
+                label: ""),
           ],
         ),
       ),
       body: PageView(
         controller: pageController,
         onPageChanged: onPageChange,
-        children: [HomeView(), HomeView(), HomeView(), HomeView(), Profile()],
+        children: [
+          HomeView(),
+          HomeView(),
+          NotificationView(),
+          AssistantBot(message: "",),
+          Profile()
+        ],
       ),
     );
   }

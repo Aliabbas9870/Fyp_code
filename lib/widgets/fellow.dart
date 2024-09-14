@@ -10,7 +10,7 @@ class Fellow extends StatelessWidget {
     return Column(
       children: [
         CircleAvatar(
-          backgroundColor:   Color(0xff156778),
+        // child: Image.asset(imag),
           backgroundImage: AssetImage(imgPath),
           radius: 30.0, // Increase the radius to make the CircleAvatar larger
         ),

@@ -12,8 +12,9 @@ class Services extends StatelessWidget {
     return Column(
       children: [
         CircleAvatar(
-          backgroundColor:   Color(0xff156778),
-          backgroundImage: AssetImage(imgPath),
+          // backgroundColor:   Color(0xff156778),
+          // backgroundImage: AssetImage(imgPath),
+          child: Image.asset(imgPath),
           radius: 30.0, // Increase the radius to make the CircleAvatar larger
         ),
         SizedBox(height: 8.0), // Add some space between the avatar and text

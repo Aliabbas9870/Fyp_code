@@ -1,8 +1,9 @@
-import 'package:beautilly/auth/signup_auth.dart';
-import 'package:beautilly/widgets/constant.dart';
+
 import 'package:flutter/material.dart';
+import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
+
 
 class EmailVerify extends StatefulWidget {
   const EmailVerify({super.key});

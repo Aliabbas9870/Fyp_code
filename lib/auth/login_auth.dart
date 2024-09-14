@@ -1,8 +1,9 @@
-import 'package:beautilly/auth/forget_pass.dart';
-import 'package:beautilly/auth/signup_auth.dart';
-import 'package:beautilly/widgets/bottomBar.dart';
-import 'package:beautilly/widgets/constant.dart';
+
 import 'package:flutter/material.dart';
+import 'package:fypapp/auth/forget_pass.dart';
+import 'package:fypapp/auth/signup_auth.dart';
+import 'package:fypapp/widgets/bottomBar.dart';
+import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginAuth extends StatefulWidget {
