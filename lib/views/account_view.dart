@@ -23,7 +23,7 @@ class _AccountViewState extends State<AccountView> {
           "Account",
           style: TextStyle(
               color: constant.primaryColor,
-              fontSize: 20,
+              fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
       ),
@@ -35,8 +35,16 @@ class _AccountViewState extends State<AccountView> {
               height: MediaQuery.sizeOf(context).height,
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 60,
+                  ),
                   CircleAvatar(
-                    radius: 33,
+                    radius: 44,
+                    child: Image.asset(
+                      "assets/images/profilepic.png",
+                      fit: BoxFit.cover,
+                      height: 80,
+                    ),
                   ),
                   SizedBox(
                     height: 10,
@@ -64,9 +72,12 @@ class _AccountViewState extends State<AccountView> {
                         ],
                       )),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  Text("Ali Abbas"),
+                  Text(
+                    "Ali Abbas",
+                    style: TextStyle(fontSize: 22),
+                  ),
                   SizedBox(
                     height: 46,
                   ),
@@ -80,6 +91,7 @@ class _AccountViewState extends State<AccountView> {
 
                         TextField(
                           decoration: InputDecoration(
+                              hintText: "Enter the Email",
                               prefixIcon: Icon(Icons.email_rounded),
                               suffixIconColor: constant.primaryColor,
                               border: OutlineInputBorder()),
@@ -93,6 +105,8 @@ class _AccountViewState extends State<AccountView> {
                         TextField(
                           obscureText: obscurePass,
                           decoration: InputDecoration(
+                  hintText: "Enter the password",
+
                               prefixIcon: Icon(Icons.key_sharp),
                               suffixIconColor: constant.primaryColor,
                               suffixIcon: IconButton(
@@ -108,7 +122,7 @@ class _AccountViewState extends State<AccountView> {
                         ),
                         // Spacer(),
                         SizedBox(
-                          height: 222,
+                          height: 172,
                         ),
                         Center(
                           child: Container(

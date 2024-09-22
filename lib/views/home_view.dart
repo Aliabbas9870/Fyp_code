@@ -22,9 +22,9 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: Container(
         height: double.infinity,
-        margin: EdgeInsets.only(left: 13, top: 15),
+        margin: EdgeInsets.only(left: 5, top: 15),
         child: Padding(
-          padding: EdgeInsets.only(top: 20, left: 5, right: 20),
+          padding: EdgeInsets.only(top: 20, left: 5, right: 5),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

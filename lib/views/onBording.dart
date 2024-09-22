@@ -104,14 +104,14 @@ class _OnBordingStartState extends State<OnBording> {
                 }),
               ),
               SizedBox(
-                height: 60,
+                height: 57,
               ),
               ElevatedButton(
                 onPressed: _nextImage,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: constant.primaryColor,
                   padding:
-                      EdgeInsets.symmetric(vertical: 15.0, horizontal: 60.0),
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 57),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
@@ -128,7 +128,7 @@ class _OnBordingStartState extends State<OnBording> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 6,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -14,13 +14,15 @@ class _AboutViewState extends State<AboutView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: constant.primaryColor,
       appBar: AppBar(
         // automaticallyImplyLeading: false,
+        iconTheme: IconThemeData(color: constant.whiteC),
         title: Text(
           "About",
           style: TextStyle(
               color: constant.whiteC,
-              fontSize: 16,
+              fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
         elevation: 20,
@@ -29,7 +31,8 @@ class _AboutViewState extends State<AboutView> {
       body: ListView(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
+            // width: MediaQuery.of(context).size.width,//
+            width: double.infinity,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -42,22 +45,29 @@ class _AboutViewState extends State<AboutView> {
                 children: [
                   Container(
                       width: 120,
-                      height: 148,
+                      height: 168,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            height: 30,
+                            height: 45,
                           ),
                           Center(
                             child: Image.asset(
                               'assets/images/gobar.png',
-                              width: 70,
+                              width: 60,
                             ),
                           ),
-                          SizedBox(height: 20,),
-                          Text("Gobar")
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            "Gobar",
+                            style: TextStyle(
+                              color: constant.whiteC,
+                                fontSize: 21, fontWeight: FontWeight.bold),
+                          )
                         ],
                       )),
                   SizedBox(
@@ -85,7 +95,7 @@ class _AboutViewState extends State<AboutView> {
                                 fontSize: 20),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: Text(
                               "Gobar: The Best Solution for Online Barber Bookings"
                               "Want a more practical and efficient hair shaving experience? Gobar is the best solution for you! Gobar is an online barber booking application that makes"
@@ -100,7 +110,7 @@ class _AboutViewState extends State<AboutView> {
                           Center(
                             child: Container(
                               height: 45,
-                              width: MediaQuery.sizeOf(context).width / 4.9,
+                              width: MediaQuery.sizeOf(context).width / 2.2,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: constant.primaryColor),

@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
           "Profile",
           style: TextStyle(
               color: constant.whiteC,
-              fontSize: 16,
+              fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
         elevation: 20,

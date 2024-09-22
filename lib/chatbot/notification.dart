@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fypapp/chatbot/AssistantBot.dart';
+import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NotificationView extends StatefulWidget {
@@ -10,6 +11,8 @@ class NotificationView extends StatefulWidget {
 }
 
 class _NotificationViewState extends State<NotificationView> {
+  final Constant constant = Constant();
+
   // List of mock messages and notifications
   List<String> messages = ["AI Assistant"];
   List<String> notifications = [
@@ -42,11 +45,22 @@ class _NotificationViewState extends State<NotificationView> {
                   showMessages = true;
                 });
               },
-              child: Text("Messages",
-                  style: GoogleFonts.manrope(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold)),
+              child: Container(
+                width: 143,
+                height: 37,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    border: showMessages == true
+                        ? Border.all(color: constant.primaryColor)
+                        : null),
+                child: Center(
+                  child: Text("Messages",
+                      style: GoogleFonts.manrope(
+                          fontSize: showMessages == true ? 20 : 18,
+                          color: constant.primaryColor,
+                          fontWeight: FontWeight.bold)),
+                ),
+              ),
             ),
             InkWell(
               onTap: () {
@@ -54,11 +68,24 @@ class _NotificationViewState extends State<NotificationView> {
                   showMessages = false;
                 });
               },
-              child: Text("Notifications",
-                  style: GoogleFonts.manrope(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold)),
+              child: Container(
+                width: 143,
+                height: 37,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    border: showMessages == false
+                        ? Border.all(
+                            color: constant.primaryColor,
+                          )
+                        : null),
+                child: Center(
+                  child: Text("Notifications",
+                      style: GoogleFonts.manrope(
+                          fontSize: showMessages == false ? 20 : 18,
+                          color: constant.primaryColor,
+                          fontWeight: FontWeight.bold)),
+                ),
+              ),
             ),
           ],
         ),

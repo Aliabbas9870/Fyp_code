@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fypapp/chatbot/AssistantBot.dart';
 import 'package:fypapp/chatbot/notification.dart';
 import 'package:fypapp/views/home_view.dart';
+import 'package:fypapp/views/home_view_girl.dart';
 import 'package:fypapp/views/profile.dart';
+import 'package:fypapp/views/shops/shop_detail.dart';
 
 class BottomBarStart extends StatefulWidget {
   const BottomBarStart({super.key});
@@ -16,7 +17,7 @@ class _BottomBarStartState extends State<BottomBarStart> {
   late PageController pageController;
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     pageController = PageController();
   }
@@ -92,9 +93,10 @@ class _BottomBarStartState extends State<BottomBarStart> {
         onPageChanged: onPageChange,
         children: [
           HomeView(),
-          HomeView(),
+          HomeViewGirl(),
+          // BookServiceView(),
+          ShopDetailView(),
           NotificationView(),
-          AssistantBot(message: "",),
           Profile()
         ],
       ),

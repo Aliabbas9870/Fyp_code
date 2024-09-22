@@ -3,8 +3,6 @@ import 'package:fypapp/views/splash_view.dart';
 import 'package:fypapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
   final Constant constant = Constant();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp( 
       debugShowCheckedModeBanner: false,
       title: 'Beautilly',
       theme: ThemeData(
