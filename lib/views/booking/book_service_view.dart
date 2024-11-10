@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fypapp/views/booking/date_get_widget.dart';
 import 'package:fypapp/views/booking/specialList.dart';
 import 'package:fypapp/views/booking/time_get_widget.dart';
+import 'package:fypapp/views/services/service_list_view.dart';
 import 'package:fypapp/widgets/bottomBar.dart';
 import 'package:fypapp/widgets/constant.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BookServiceView extends StatefulWidget {
@@ -20,7 +22,6 @@ class _BookServiceViewState extends State<BookServiceView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: constant.whiteC,
-
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: constant.whiteC,
@@ -174,67 +175,15 @@ class _BookServiceViewState extends State<BookServiceView> {
             ),
             InkWell(
               onTap: () {
-                showDialog(
-                    context: context,
-                    builder: (c) {
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          AlertDialog(
-                            title: Text("Congrets"),
-                            content: Column(
-                              children: [
-                                Text("Booking Successfuly booked"),
-                                SizedBox(
-                                  height: 30,
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                        width: 55,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            color: constant.primaryColor),
-                                        child: Center(
-                                            child: Text(
-                                          "Ok",
-                                          style: TextStyle(
-                                              color: constant.whiteC,
-                                              fontSize: 18),
-                                        ))),
-                                    SizedBox(
-                                      width: 30,
-                                    ),
-                                    InkWell(
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Container(
-                                          width: 65,
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              color: constant.primaryColor),
-                                          child: Center(
-                                              child: Text(
-                                            "Cancel",
-                                            style: TextStyle(
-                                                color: constant.whiteC,
-                                                fontSize: 18),
-                                          ))),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      );
-                    });
+                Get.snackbar(
+                  snackPosition: SnackPosition.TOP,
+                  backgroundColor: constant.primaryColor,
+                  colorText: constant.whiteC,
+                  
+                  "Congrets", "Booking booked");
+                Future.delayed(Duration(seconds: 2),);
+                Get.to(()=>ServiceListView());
+                    // Navigator.push(context, MaterialPageRoute(builder: (c)=>ServiceListView()));
               },
               child: Container(
                   margin: EdgeInsets.only(right: 10),
